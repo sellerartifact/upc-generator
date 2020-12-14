@@ -35,10 +35,10 @@ export default class UPC {
   }
   public createMultiple(prop: CreateProps = { size: 1 }): string[] {
     let { size } = prop
-    let arr: string[] = new Array(size)
     if (!size || Number(size) <= 0 || isNaN(Number(size))) {
       size = 1
     }
+    let arr: string[] = new Array(size)
     for (let i = 0; i < size; i++) {
       arr[i] = this.create(prop)
     }

@@ -9,6 +9,10 @@ describe('test', () => {
       expect(code.length).toBe(12)
       expect(code.charAt(0)).toBe('1')
     }
+
+    let upc2 = new UPC()
+    let code2 = upc2.create()
+    expect(code2.length).toBe(12)
   })
 
   it(`return prop range error`, () => {
@@ -25,6 +29,15 @@ describe('test', () => {
   it('test createMultiple method', () => {
     let arr = upc.createMultiple({ size: 3 })
     expect(arr.length).toBe(3)
+    for (let i = 0; i < arr.length; i++) {
+      expect(arr[i].length).toBe(12)
+      expect(arr[i].charAt(0)).toBe('1')
+    }
+  })
+
+  it('test size prop', () => {
+    let arr = upc.createMultiple({ size: -1 })
+    expect(arr.length).toBe(1)
     for (let i = 0; i < arr.length; i++) {
       expect(arr[i].length).toBe(12)
       expect(arr[i].charAt(0)).toBe('1')
