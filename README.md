@@ -60,6 +60,22 @@ const code = upc.create({manufacturer: '1', flagCode: '23456'})
 // 123456545694
 ```
 
+# createMultiple(prop)
+gen multiple upc-12 code, return `array`
+
+**code**
+
+```javascript
+const arr = upc.createMultiple({size: 3, countryCode: '9', vendorEan: '87654'})
+```
+
+
+### prop?
+
+**size？**
+Type: `number` Default: 1
+
+
 # isValid(code)
 
 Check ean code whether it is legal

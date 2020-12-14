@@ -59,6 +59,15 @@ const code = upc.create({manufacturer: '1', flagCode: '23456'})
 // 123456545694
 ```
 
+# createMultiple(prop)
+生成多个UPC码 返回一个`数组`
+
+**code**
+
+```javascript
+const arr = upc.createMultiple({size: 3, countryCode: '9', vendorEan: '87654'})
+```
+
 # isValid(code)
 
 校验传递进去的upc码是否合法
