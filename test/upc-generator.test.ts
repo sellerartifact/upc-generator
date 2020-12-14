@@ -1,6 +1,6 @@
 import UPC from "../src/upc-generator"
 
-let upc = new UPC({flagCode: '1'})
+let upc = new UPC({flagCode: '1',manufacturer:'23456'})
 /**
  * Dummy test
  */

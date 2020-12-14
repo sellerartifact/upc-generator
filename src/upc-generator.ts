@@ -42,7 +42,6 @@ export default class UPC {
     }
     let computedLastNum = this.computedEanLastNum(num)
     let lastNum = num.toString().charAt(11)
-    console.log('num', num, lastNum, computedLastNum)
     return lastNum === computedLastNum
   }
 
