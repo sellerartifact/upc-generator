@@ -1,6 +1,6 @@
 {
   "name": "upc-generator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A randomly generated UPC-12(UPC-A) code For Amazon",
   "keywords": ["upc", "upc12", "upc-12", "upc-A","upcA","amazon"],
   "main": "dist/upc-generator.umd.js",
@@ -12,7 +12,7 @@
   "author": "王珏 <wangjuesix@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/wangjue666/upc-generator"
   },
   "license": "MIT",
   "engines": {
