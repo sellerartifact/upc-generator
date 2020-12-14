@@ -1,6 +1,5 @@
 # upc-generator
-A randomly generated UPC-12(UPC-A) code For Amazon
-
+可为亚马逊随机生成UPC-12(UPC-A)码
 <p align="center">
      <a href="https://travis-ci.org/wangjue666/upc-generator"><img src="https://travis-ci.org/wangjue666/upc-generator.svg?branch=master" /></a>
     <a></a>
@@ -45,12 +44,12 @@ Type: object
 **flagCode？**
 Type: literals `'0' | '1' | '6' | '7' | '8' | '9' | ''` 
 
-set First code of UPC bar code
+设置生成的UPC第一位的旗码
 
 **manufacturer？**
 Type: `string` Default: ''
 
-Set gen upc number 2th to 6th, It represents the manufacturer code
+设置生成的UPC第2-6位的厂商码
 
 
 ## create(prop)
@@ -62,7 +61,7 @@ const code = upc.create({manufacturer: '1', flagCode: '23456'})
 
 # isValid(code)
 
-Check ean code whether it is legal
+校验传递进去的upc码是否合法
 
 Type:: `string`
 
