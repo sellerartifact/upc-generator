@@ -9,28 +9,41 @@ interface CreateProps {
 
 
 export default class UPC {
-  private _flag:FlagCode = '0'
+  private _flagCode:FlagCode = '0'
   private _manufacturer:string = ''
 
   static flagCodeArr:FlagCode[] = ['0','1','6','7','8','9']
 
-  constructor(flag:FlagCode = '', manufacturer:string = ''){
-    this._flag = flag
-    this._manufacturer = manufacturer
+  constructor(prop:CreateProps={}){
+    let { flagCode, manufacturer } = prop
+    this._flagCode = flagCode || ''
+    if (manufacturer && manufacturer.length !== 5) {
+      throw new RangeError('the length of manufacturer must be 5')
+    }
+    this._manufacturer = manufacturer || ''
   }
 
 
-  public create(prop:CreateProps){
+  public create(prop:CreateProps = {}){
     let { flagCode, manufacturer } = prop
     if (manufacturer && manufacturer.length !== 5) {
       throw new RangeError('the length of manufacturer must be 5')
     }else{
-      manufacturer = this._manufacturer
+      prop.manufacturer = this._manufacturer
     }
     if(!flagCode){
-      flagCode = this._flag
+      prop.flagCode = this._flagCode
     }
     return this._create(prop)
+  }
+  public isValid(num: string): boolean {
+    if (num.length !== 12) {
+      return false
+    }
+    let computedLastNum = this.computedEanLastNum(num)
+    let lastNum = num.toString().charAt(11)
+    console.log('num', num, lastNum, computedLastNum)
+    return lastNum === computedLastNum
   }
 
   private _create(prop:CreateProps):string{
@@ -61,9 +74,9 @@ export default class UPC {
       }
       bOdd = !bOdd
     }
-    let sum: string | number = odd + even * 3
-    sum = sum.toString()
-    let lastestNum = (10 - Number(sum[sum.length - 1])) % 10
+    let sum: number = odd * 3 + even 
+   
+    let lastestNum = (10 - sum%10) % 10
     return lastestNum.toString()
   }
 
