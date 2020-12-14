@@ -29,7 +29,5 @@ describe('test', () => {
       expect(arr[i].length).toBe(12)
       expect(arr[i].charAt(0)).toBe('1')
     }
-    console.log(arr)
   })
 })
-//[ '123456234383', '123456617292', '123456490642' ]
