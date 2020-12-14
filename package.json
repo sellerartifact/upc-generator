@@ -1,8 +1,8 @@
 {
   "name": "upc-generator",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A randomly generated UPC-12(UPC-A) code For Amazon",
-  "keywords": [],
+  "keywords": ["upc", "upc12", "upc-12", "upc-A","upcA","amazon"],
   "main": "dist/upc-generator.umd.js",
   "module": "dist/upc-generator.es5.js",
   "typings": "dist/types/upc-generator.d.ts",
