@@ -14,10 +14,7 @@
     "outDir": "dist/lib",
     "typeRoots": [
       "node_modules/@types"
-    ],
-    "compilerOptions": {
-      "sourceMap": true,
-    }
+    ]
   },
   "include": [
     "src"
