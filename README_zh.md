@@ -55,7 +55,7 @@ Type: `string` Default: ''
 ## create(prop)
 gen upc-12 code
 ```javascript
-const code = upc.create({manufacturer: '1', flagCode: '23456'})
+const code = upc.create({flagCode: '1', manufacturer: '23456'})
 // 123456545694
 ```
 
@@ -65,7 +65,7 @@ const code = upc.create({manufacturer: '1', flagCode: '23456'})
 **code**
 
 ```javascript
-const arr = upc.createMultiple({size: 3, countryCode: '9', vendorEan: '87654'})
+const arr = upc.createMultiple({size: 3, flagCode: '1', manufacturer: '23456'})
 ```
 
 # isValid(code)

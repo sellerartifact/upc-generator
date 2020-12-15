@@ -56,7 +56,7 @@ Set gen upc number 2th to 6th, It represents the manufacturer code
 ## create(prop)
 gen upc-12 code
 ```javascript
-const code = upc.create({manufacturer: '1', flagCode: '23456'})
+const code = upc.create({flagCode: '1', manufacturer: '23456'})
 // 123456545694
 ```
 
@@ -66,7 +66,7 @@ gen multiple upc-12 code, return `array`
 **code**
 
 ```javascript
-const arr = upc.createMultiple({size: 3, countryCode: '9', vendorEan: '87654'})
+const arr = upc.createMultiple({size: 3, flagCode: '1', manufacturer: '23456'})
 ```
 
 
