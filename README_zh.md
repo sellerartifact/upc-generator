@@ -2,7 +2,7 @@
 可为亚马逊随机生成UPC-12(UPC-A)码
 <p align="center">
      <a href="https://travis-ci.org/wangjue666/upc-generator"><img src="https://travis-ci.org/wangjue666/upc-generator.svg?branch=master" /></a>
-    <a></a>
+     <a href="https://codecov.io/gh/wangjue666/upc-generator"><img src="https://codecov.io/gh/wangjue666/upc-generator/branch/master/graph/badge.svg" /></a>
     <a href="https://npmcharts.com/compare/upc-generator?minimal=true" rel="nofollow"><img src="https://img.shields.io/npm/dm/upc-generator.svg" style="max-width:100%;"></a>
     <a href="https://www.npmjs.com/package/upc-generator" rel="nofollow"><img src="https://img.shields.io/npm/v/upc-generator.svg" style="max-width:100%;"></a>
     <a href="https://www.npmjs.com/package/upc-generator" rel="nofollow"><img src="https://img.shields.io/npm/l/upc-generator.svg?style=flat" style="max-width:100%;"></a>
